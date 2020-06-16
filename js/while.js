@@ -2,7 +2,8 @@ function getRandomNumber(upper) {
   return Math.floor( Math.random() * upper ) + 1;
 }
 
-/* If you do nt know how many times the code should run, you can use a while loop */
+/* `while` loop executes code as long as a condition evaluates to true
+If you do nt know how many times the code should run, you can use a while loop */
 
 let counter = 0;
 while (counter < 10) {
