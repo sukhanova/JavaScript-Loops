@@ -1,17 +1,15 @@
 let html = '';
-let red;
-let green;
-let blue;
-let randomRGB;
+const randomValue = () => Math.floor(Math.random() * 256);
 
-
-for(let i = 1; i <= 10; i++){
-red = Math.floor(Math.random() * 256);
-green = Math.floor(Math.random() * 256);
-blue = Math.floor(Math.random() * 256);
-randomRGB = `rgb( ${red}, ${green}, ${blue} )`;
-html += `<div style="background-color: ${randomRGB}">${i}</div>`;
+function randomRGB(value) {
+    const color = `rgb(${value()}, ${value()}, ${value()})`;
+    return color;
 }
 
+for(let i = 1; i <= 10; i++){
+html += `<div style="background-color: ${randomRGB(randomValue)}">${i}</div>`;
+}
 
 document.querySelector('main').innerHTML = html;
+
+
